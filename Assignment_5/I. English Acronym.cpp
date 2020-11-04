@@ -42,5 +42,59 @@ int main(){
 
 //solution 2
 /*
+#include<bits/stdc++.h>
+using namespace std;
 
+bool judge(char ch){
+    if (ch >= 'A' and ch <= 'Z')
+        return true;
+    return false;
+}
+
+string upper(string s){
+    for (int i = 0; i < s.length(); i++){
+        s[i] = (s[i] >= 'a' and s[i] <= 'z') ? s[i] + 'A' - 'a' : s[i];
+    }
+        return s;
+}
+
+int main(){
+    int count = 0;
+    bool flag = true;
+    bool flag2 = true;
+    string s;
+    char ch[100];
+    char temp;
+    while(true){
+        memset(ch, '\000', sizeof(ch));
+        s.clear();
+        scanf("%s[^\n-]", &ch);
+        temp = getchar();
+        s = ch;
+        if(flag){
+            printf("Case %d:", ++count);
+            flag = false;
+        }
+        // should use a temp_v to voiding lowercase situation
+        s = upper(s);
+        if (s == "THE" or s == "A" or s == "AN" or s == "OF" or s == "FOR" or s == "AND")
+            continue;
+        if(s[0]!=' '){
+            if(flag2){
+                cout << " ";
+                flag2 = false;
+            }
+            cout << s[0];
+        }
+        if(temp=='\n'){
+            cout << endl;
+            flag = true;
+            flag2 = true;
+        }
+
+        if(temp==EOF)
+            break;
+    }
+    return 0;
+}
 */
